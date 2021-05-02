@@ -38,7 +38,7 @@
             android:layout_height="match_parent"
             android:textColor="@color/mild_blue"
             android:id="@+id/edtArtist"
-            android:hint="Title Name"/>
+            android:hint="Artist Name"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button

@@ -17,9 +17,13 @@ android {
     }
 
     buildTypes {
+//        debug{
+//            bulidConfigField 'String', "ApiKey", LyricsFinder_API_KEY
+//        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+//            bulidConfigField 'String', "ApiKey", LyricsFinder_API_KEY
         }
     }
     compileOptions {

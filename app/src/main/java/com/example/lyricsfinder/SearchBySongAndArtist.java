@@ -70,9 +70,7 @@ public class SearchBySongAndArtist extends AppCompatActivity {
 
 
         String url = urlBase;
-        /*
-        TODO Here is the api key for this app
-         */
+        String key = "&apikey=45a19f1f0dd81a4ff34ced6407b7af8e";
         url+="q_track="+edtSong.getText().toString()+"";
         url+="&q_artist="+edtArtist.getText().toString()+"";
         url+=key;
@@ -86,7 +84,7 @@ public class SearchBySongAndArtist extends AppCompatActivity {
                 Log.d("TAG", response.toString());
 
                 try {
-                   String lyrics_body;
+                    String lyrics_body;
                     JSONObject message = response.getJSONObject("message");
                     JSONObject body = message.getJSONObject("body");
                     JSONObject lyrics = body.getJSONObject("lyrics");

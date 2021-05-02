@@ -1,71 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/light_blue"
     tools:context=".SearchBySongAndArtist">
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/line"
+        android:textColorHint="@color/dark_blue"
+        android:layout_margin="12dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtPara"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/mild_blue"
+            android:hint="Paragraph"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/searchPara"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line"
+        android:layout_centerHorizontal="true"
+        android:text="search"
+        android:textAllCaps="true"
+        android:layout_marginTop="12dp"
+        android:textColor="@color/light_blue" />
+
     <TextView
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lyrics"
+        android:layout_marginLeft="18dp"
+        android:layout_below="@id/searchPara"
+        android:textColor="@color/dark_blue"
+        android:textSize="22sp" />
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Under Development"
-        android:gravity="center"
-        android:textColor="@color/dark_blue"
-        android:textSize="32sp"/>
+        android:layout_below="@+id/line1"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:layout_centerHorizontal="true">
 
-<!--    <com.google.android.material.textfield.TextInputLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:id="@+id/edtPara"-->
-<!--        android:textColorHint="@color/dark_blue"-->
-<!--        android:layout_margin="12dp"-->
-<!--        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">-->
+        <TextView
+            android:id="@+id/lyricsPara"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/mild_blue"
+            android:textSize="22sp" />
 
-<!--        <com.google.android.material.textfield.TextInputEditText-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:textColor="@color/mild_blue"-->
-<!--            android:hint="Paragraph"/>-->
-<!--    </com.google.android.material.textfield.TextInputLayout>-->
-
-<!--    <Button-->
-<!--        android:id="@+id/searchPara"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_below="@+id/edtPara"-->
-<!--        android:layout_centerHorizontal="true"-->
-<!--        android:text="search"-->
-<!--        android:textAllCaps="true"-->
-<!--        android:layout_marginTop="12dp"-->
-<!--        android:textColor="@color/light_blue" />-->
-
-<!--    <TextView-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="Lyrics"-->
-<!--        android:layout_marginLeft="18dp"-->
-<!--        android:layout_below="@id/searchPara"-->
-<!--        android:textColor="@color/dark_blue"-->
-<!--        android:textSize="22sp" />-->
-
-<!--    <ScrollView-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:layout_below="@+id/searchPara"-->
-<!--        android:layout_marginLeft="6dp"-->
-<!--        android:layout_marginTop="12dp"-->
-<!--        android:layout_marginBottom="12dp"-->
-<!--        android:layout_centerHorizontal="true">-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/lyricsPara"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:textColor="@color/mild_blue"-->
-<!--            android:textSize="14sp" />-->
-
-<!--    </ScrollView>-->
+    </ScrollView>
 
 </RelativeLayout>
